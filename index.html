@@ -23,12 +23,12 @@
     </center>
         <script>
             const backgroundMusic = new Audio('audio.mp3');
-let audioIsPlaying = false; // Flag to track if audio is playing
+let audioIsPlaying = false; 
 
 function playAudio() {
     if (!audioIsPlaying) {
         backgroundMusic.play();
-        audioIsPlaying = true; // Set the flag to true
+        audioIsPlaying = true; 
     }
 }
         showButton.addEventListener('click', playAudio);
