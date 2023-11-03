@@ -22,11 +22,16 @@
         <p class="showbutton" id="showButton" onclick="playAudio()">[ click here ]</p>
     </center>
         <script>
-            function playAudio() {
-                const backgroundMusic = new Audio('audio.mp3');
-                backgroundMusic.play();
-            }
-            showButton.addEventListener('click', playAudio);
+            const backgroundMusic = new Audio('audio.mp3');
+let audioIsPlaying = false; // Flag to track if audio is playing
+
+function playAudio() {
+    if (!audioIsPlaying) {
+        backgroundMusic.play();
+        audioIsPlaying = true; // Set the flag to true
+    }
+}
+        showButton.addEventListener('click', playAudio);
         </script>
         <div id="container">
             <div id="sourceDiv">
